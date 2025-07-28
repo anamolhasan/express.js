@@ -1,11 +1,13 @@
 
 ```bash
 npm run start:dev
+```
 
   user-profile-api
 
 ```bash
 npm run start
+```
 
 
 ```bash 
@@ -24,8 +26,11 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is listening on port http://localhost:${port}`)
 })
+```
 
 
-``` "start": "nodemon index.js",
+```bash 
+"start": "nodemon index.js",
+```
 
 

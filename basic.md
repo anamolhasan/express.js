@@ -1,22 +1,28 @@
+# 🎨 CSS Notes (Beginner Friendly)
+
+Learn the basics of styling your web pages using **CSS** – Cascading Style Sheets.
 
 ---
 
-## ⚠️ কিন্তু সমস্যা কোথায় হয়?
+## ✅ Adding CSS
 
-তুমি যদি এক `bash` ব্লকের ভিতরে আরেকটা `bash` ব্লক লেখো, তাহলে Markdown সেটা বুঝতে পারে না। তাই **প্রতিটি `bash` ব্লক আলাদা করে লিখতে হবে**।
+CSS can be added to HTML in 3 ways:
 
----
+### 1️⃣ Inline CSS
 
-## 🎯 তুমি যদি একটায় সব রাখতে চাও:
+CSS is added directly inside the HTML element using the `style` attribute:
 
-```bash
-# Install
-npm install
+```html
+<p style="color: blue; font-size: 16px;">This is an inline CSS example.</p>
 
-```bash
-# Development
-npm run start:dev
-
-```bash
-# Production
-npm run start
+<head>
+  <style>
+    p {
+      color: green;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <p>This is an internal CSS example.</p>
+</body>
