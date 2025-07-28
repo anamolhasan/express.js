@@ -13,8 +13,10 @@
 # Install
 npm install
 
+```bash
 # Development
 npm run start:dev
 
+```bash
 # Production
 npm run start
