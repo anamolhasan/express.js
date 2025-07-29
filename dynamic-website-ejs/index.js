@@ -3,6 +3,9 @@ const app = express()
 const path = require('path')
 const port = process.env.PORT || 3000
 
+// static file
+app.use(express.static(path.join(process.cwd(), 'public')))
+
 // config template engine
 app.set('view engine', 'ejs')
 app.set('views', path.join(process.cwd(), 'views'))
