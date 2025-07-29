@@ -19,6 +19,18 @@ app.get('/', (req, res) => {
   res.render('index', {title: 'Product List', products})
 })
 
+// dynamic product routes
+app.get('/product/:id', (req, res) => {
+  const productId = req.params.id
+
+  const product = products.find(product => product.id === parseInt(productId))
+  if(!product){
+    res.status(404).send('Product not found!')
+  }
+
+  res.render('product', {product})
+})
+
 
 app.listen(port, () => {
   console.log(`Server is listening on port http://localhost:${port}`)
