@@ -1,12 +1,22 @@
 const express = require('express')
-
 const app = express()
+const path = require('path')
 const port = process.env.PORT || 3000
 
+// config template engine
+app.set('view engine', 'ejs')
+app.set('views', path.join(process.cwd(), 'views'))
+
+// sample products data
+const products = [
+  {id: 1, name: "Laptop", description: "This is a apple laptop", price: 1000},
+  {id: 2, name: "Mouse", description: "This is a Logitech mouse", price: 50},
+  {id: 3, name: "Keyboard", description: "This is a Logitech keyboard", price: 100}
+]
 
 
 app.get('/', (req, res) => {
-  res.send('Server is running ........')
+  res.render('index', {title: 'Product List', products})
 })
 
 
